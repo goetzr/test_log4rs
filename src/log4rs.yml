@@ -1,0 +1,23 @@
+appenders:
+  console:
+    kind: console
+    encoder:
+      pattern: "{d(%Y-%m-%dT%H:%M:%S%.3f)} [{l:<5}]: {m}{n}"
+
+  file:
+    kind: file
+    path: "log.txt"
+    encoder:
+      pattern: "{d(%Y-%m-%dT%H:%M:%S%.3f)} [{l:<5}]: {m}{n}"
+
+root:
+  level: warn
+  appenders:
+    - console
+
+loggers:
+  file_logger:
+    level: debug
+    appenders:
+      - file
+    additive: false
