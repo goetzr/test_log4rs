@@ -21,3 +21,5 @@ loggers:
     appenders:
       - file
     additive: false
+
+    TODO: Specify both appender in root, move level to each appender
