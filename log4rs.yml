@@ -11,15 +11,7 @@ appenders:
       pattern: "{d(%Y-%m-%dT%H:%M:%S%.3f)} [{l:<5}]: {m}{n}"
 
 root:
-  level: warn
+  level: info
   appenders:
     - console
-
-loggers:
-  file_logger:
-    level: debug
-    appenders:
-      - file
-    additive: false
-
-    TODO: Specify both appender in root, move level to each appender
+    - file
